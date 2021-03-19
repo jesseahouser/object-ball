@@ -115,6 +115,10 @@ function gameObject() {
     }
 }
 
+/////////////////////
+// BASIC FUNCTIONS //
+/////////////////////
+
 // This function calls a second function.
 // function homeTeamName() {
 //   let object = gameObject()
@@ -229,25 +233,41 @@ function bigShoeRebounds() {
             let largestShoe = 0
             let numberReboundsLargestShoe = 0
             for (let playerKey in playerObj) { // iterate through player names
-                if (playerObj[playerKey].shoe > largestShoe) {
-                    largestShoe = playerObj[playerKey].shoe
-                    numberReboundsLargestShoe = playerObj[playerKey].rebounds
+                if (playerObj[playerKey].shoe > largestShoe) { // check to see if player's shoe size is the largest so far
+                    largestShoe = playerObj[playerKey].shoe // if it is, update the largest shoe size
+                    numberReboundsLargestShoe = playerObj[playerKey].rebounds // and updeat the number of rebounds
                 }
             }
-            return numberReboundsLargestShoe
+            return numberReboundsLargestShoe // return the number of rebounds for the player with the largest shoe size
         }
     }
 }
 
+/////////////////////
+// BONUS FUNCTIONS //
+/////////////////////
+
+// Which player has the most points?
 function mostPointsScored() {
 
 }
 
+// Which team has the most points?
 function winngingTeam() {
 
 }
 
+// Which player has the longest name?
 function playerWithLongestName() {
+
+}
+
+//////////////////////////
+// SUPER BONUS FUNCTION //
+//////////////////////////
+
+// Returns true if the player with the longest name had the most steals
+function doesLongNameStealATon() {
 
 }
 
@@ -260,8 +280,10 @@ console.log('Player numbers:', playerNumbers("Brooklyn Nets"))
 console.log('Player stats:', playerStats("Brook Lopez"))
 console.log('Number of rebounds for the player with the largest shoe size:', bigShoeRebounds())
 
+///////////////////////
+// MEAGAN'S SOLUTION //
+///////////////////////
 
-// // MEAGAN'S SOLUTION
 // function allPlayers() {
 // return Object.assign({}, gameObject().home.players, gameObject().away.players)
 // }
